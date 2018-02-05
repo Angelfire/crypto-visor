@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './components/Card/Card';
 import axios from 'axios';
 import { formatNum, getCoinColor } from './utils';
 import './App.css';
@@ -61,11 +62,13 @@ class App extends Component {
 
 
   render() {
+    const { coins } = this.state;
+
     return (
-      <div className="App">
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="container">
+        <div className="card-wrapper">
+          { coins.map((coin, i) => <Card coin={coin} key={i} /> ) }
+        </div>
       </div>
     );
   }
