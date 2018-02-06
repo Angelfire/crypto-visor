@@ -21,12 +21,18 @@ my-app/
     index.html
     favicon.ico
   src/
+    components/
+      Card/
+        Card.js
+        Card.css
+        Card.test.js
     App.css
     App.js
     App.test.js
     index.css
     index.js
-    logo.svg
+    particlesconfig.js
+    utils.js
 ```
 
 For the project to build, **these files must exist with exact filenames**:
