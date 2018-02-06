@@ -66,7 +66,7 @@ class App extends Component {
 
     return (
       <div className="container">
-        <div className="card-wrapper">
+        <div className="row py-5">
           { coins.map((coin, i) => <Card coin={coin} key={i} /> ) }
         </div>
       </div>

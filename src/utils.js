@@ -14,26 +14,41 @@ const GRAY = 'GRAY';
 export const getCoinColor = symbol => {
   switch(symbol){
     case 'BTC':
-      return ORANGE
+      return ORANGE;
     case 'ETH':
-      return BLUE
+      return BLUE;
     case 'XRP':
-      return BLUE
+      return BLUE;
     case 'BCH':
-      return GREEN
+      return GREEN;
     case 'ADA':
-      return BLUE
+      return BLUE;
     case 'XLM':
-      return BLUE
+      return BLUE;
     case 'LTC':
-      return GRAY
+      return GRAY;
     case 'NEO':
-      return GREEN
+      return GREEN;
     case 'EOS':
-      return GRAY
+      return GRAY;
     case 'XEM':
-      return BLUE
+      return BLUE;
     default:
-      return GRAY
+      return GRAY;
+  }
+}
+
+export const getColorClass = color => {
+  switch(color){
+    case ORANGE:
+      return 'orange';
+    case BLUE:
+      return 'blue';
+    case GREEN:
+      return 'green';
+    case GRAY:
+      return 'gray';
+    default:
+      return 'gray';
   }
 }
