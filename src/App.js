@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import Particles from 'react-particles-js';
 import Card from './components/Card/Card';
 import axios from 'axios';
 import { formatNum, getCoinColor } from './utils';
+import { particlesConfig } from './particlesconfig';
 import './App.css';
 
 class App extends Component {
@@ -65,9 +67,12 @@ class App extends Component {
     if (!coins.length) return null;
 
     return (
-      <div className="container">
-        <div className="row py-5">
-          { coins.map((coin, i) => <Card coin={coin} key={i} /> ) }
+      <div className="app">
+        <Particles className="particles" params={ particlesConfig } />
+        <div className="container">
+          <div className="row py-5">
+            { coins.map((coin, i) => <Card coin={coin} key={i} /> ) }
+          </div>
         </div>
       </div>
     );
