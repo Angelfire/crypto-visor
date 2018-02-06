@@ -52,3 +52,20 @@ export const getColorClass = color => {
       return 'gray';
   }
 }
+
+export const determineSign = num => {
+  return parseFloat(num) >= 0 ? 'pos' : 'neg';
+}
+
+export const timeConverter = timestamp => {
+  const d = new Date(timestamp * 1000);
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const year = d.getFullYear();
+  const month = months[d.getMonth()];
+  const date = d.getDate();
+  const hour = d.getHours();
+  const min = d.getMinutes();
+  const sec = d.getSeconds();
+
+  return `${date}/${month}/${year} ${hour}:${min}:${sec}`;
+}

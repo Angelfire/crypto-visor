@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getCoints();
+    this.getCoints(9);
   }
 
   /**
@@ -35,9 +35,7 @@ class App extends Component {
       rank: coin.rank,
       price: formatNum(coin.price_usd),
       change24hr: coin.percent_change_24h,
-      cap: formatNum(coin.market_cap_usd),
-      volume: formatNum(coin['24h_volume_usd']),
-      circulating: formatNum(coin.available_supply),
+      lastUpdate: coin.last_updated,
       img: this.getCoinIcon(coin.symbol.toLowerCase()),
       color: getCoinColor(coin.symbol)
     }))
@@ -46,9 +44,9 @@ class App extends Component {
   /**
    * 
    */
-  getCoints = () => {
+  getCoints = n => {
     this.setState({ isLoading: true });
-    axios.get('https://api.coinmarketcap.com/v1/ticker/')
+    axios.get(`https://api.coinmarketcap.com/v1/ticker/?limit=${n}`)
       .then(res => {
         const coins = this.mapCoins(res.data);
         this.setState({ coins });
@@ -63,6 +61,8 @@ class App extends Component {
 
   render() {
     const { coins } = this.state;
+
+    if (!coins.length) return null;
 
     return (
       <div className="container">
