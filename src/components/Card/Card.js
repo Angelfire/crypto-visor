@@ -1,5 +1,5 @@
 import React from 'react';
-import { getColorClass, determineSign, timeConverter } from '../../utils';
+import { getColorClass, determineSign, timeConverter } from '../../utils/helpers';
 import './Card.css';
 
 const Card = ({ coin }) => {

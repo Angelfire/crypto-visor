@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import Card from './components/Card/Card';
 import axios from 'axios';
-import { formatNum, getCoinColor } from './utils';
-import { particlesConfig } from './particlesconfig';
+import { formatNum, getCoinColor } from './utils/helpers';
+import { particlesConfig } from './utils/particlesconfig';
 import './App.css';
 
 class App extends Component {
@@ -11,8 +11,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      coins: [],
-      isLoading: false
+      coins: []
     };
   }
 
@@ -47,12 +46,10 @@ class App extends Component {
    * 
    */
   getCoints = n => {
-    this.setState({ isLoading: true });
     axios.get(`https://api.coinmarketcap.com/v1/ticker/?limit=${n}`)
       .then(res => {
         const coins = this.mapCoins(res.data);
         this.setState({ coins });
-        this.setState({ isLoading: false });
       })
       .catch(err => {
         console.error('Error loading data from Coin Market Cap');
@@ -71,7 +68,7 @@ class App extends Component {
         <Particles className="particles" params={ particlesConfig } />
         <div className="container">
           <div className="row py-5">
-            { coins.map((coin, i) => <Card coin={coin} key={i} /> ) }
+            { coins.map((coin, i) => <Card coin={coin} key={i} />) }
           </div>
         </div>
       </div>

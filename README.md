@@ -13,10 +13,13 @@
 After creation, your project should look like this:
 
 ```
-my-app/
+crypto-visor/
   README.md
   node_modules/
   package.json
+  utils/
+    particlesconfig.js
+    utils.js
   public/
     index.html
     favicon.ico
@@ -31,8 +34,7 @@ my-app/
     App.test.js
     index.css
     index.js
-    particlesconfig.js
-    utils.js
+
 ```
 
 For the project to build, **these files must exist with exact filenames**:
