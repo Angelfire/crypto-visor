@@ -16,23 +16,16 @@ export const getCoinColor = symbol => {
     case 'BTC':
       return ORANGE;
     case 'ETH':
-      return BLUE;
+    case 'XLM':
     case 'XRP':
-      return BLUE;
-    case 'BCH':
-      return GREEN;
     case 'ADA':
       return BLUE;
-    case 'XLM':
-      return BLUE;
-    case 'LTC':
-      return GRAY;
+    case 'BCH':
     case 'NEO':
       return GREEN;
-    case 'EOS':
+    case 'LTC':
       return GRAY;
-    case 'XEM':
-      return BLUE;
+    case 'EOS':
     default:
       return GRAY;
   }
@@ -47,7 +40,6 @@ export const getColorClass = color => {
     case GREEN:
       return 'green';
     case GRAY:
-      return 'gray';
     default:
       return 'gray';
   }
