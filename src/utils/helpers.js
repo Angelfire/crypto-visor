@@ -56,8 +56,10 @@ export const timeConverter = timestamp => {
   const month = months[d.getMonth()];
   const date = d.getDate();
   const hour = d.getHours();
-  const min = d.getMinutes();
-  const sec = d.getSeconds();
+  const min = (d.getMinutes() < 10) ? `0${d.getMinutes()}` : d.getMinutes(); 
+  const sec = (d.getSeconds() < 10) ? `0${d.getSeconds()}` : d.getSeconds(); 
+
+  console.log(d.getMinutes());
 
   return `${date}/${month}/${year} ${hour}:${min}:${sec}`;
 }
