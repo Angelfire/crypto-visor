@@ -16,23 +16,16 @@ export const getCoinColor = symbol => {
     case 'BTC':
       return ORANGE;
     case 'ETH':
-      return BLUE;
+    case 'XLM':
     case 'XRP':
-      return BLUE;
-    case 'BCH':
-      return GREEN;
     case 'ADA':
       return BLUE;
-    case 'XLM':
-      return BLUE;
-    case 'LTC':
-      return GRAY;
+    case 'BCH':
     case 'NEO':
       return GREEN;
-    case 'EOS':
+    case 'LTC':
       return GRAY;
-    case 'XEM':
-      return BLUE;
+    case 'EOS':
     default:
       return GRAY;
   }
@@ -47,7 +40,6 @@ export const getColorClass = color => {
     case GREEN:
       return 'green';
     case GRAY:
-      return 'gray';
     default:
       return 'gray';
   }
@@ -64,8 +56,8 @@ export const timeConverter = timestamp => {
   const month = months[d.getMonth()];
   const date = d.getDate();
   const hour = d.getHours();
-  const min = d.getMinutes();
-  const sec = d.getSeconds();
+  const min = (d.getMinutes() < 10) ? `0${d.getMinutes()}` : d.getMinutes();
+  const sec = (d.getSeconds() < 10) ? `0${d.getSeconds()}` : d.getSeconds();
 
   return `${date}/${month}/${year} ${hour}:${min}:${sec}`;
 }

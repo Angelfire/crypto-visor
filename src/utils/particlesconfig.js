@@ -1,13 +1,13 @@
 export const particlesConfig = {
   "particles": {
     "number": {
-      "value": 99
+      "value": 32
     },
     "color": {
-      "value": "#607d8b"
+      "value": "#0D47A1"
     },
     "size": {
-      "value": 2
+      "value": 3
     },
     "line_linked": {
       "enable": true,
@@ -29,7 +29,7 @@ export const particlesConfig = {
       "grab": {
         "distance": 500,
         "line_linked": {
-          "opacity": 1
+          "opacity": 0.5
         }
       }
     }
