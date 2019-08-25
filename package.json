@@ -1,22 +1,29 @@
 {
-  "name": "cryptocurrencies",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://angelfire.github.io/crypto-visor",
-  "dependencies": {
-    "axios": "^0.17.1",
-    "gh-pages": "^1.1.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-particles-js": "^2.1.0",
-    "react-scripts": "1.1.0"
-  },
+  "name": "visor-crypto",
+  "version": "1.0.0",
+  "description": "Simple Crypto Visor",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  }
+    "start": "parcel public/index.html --open",
+    "build": "parcel build public/index.html"
+  },
+  "keywords": [
+    "Crypto"
+  ],
+  "author": "Andres Bedoya",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-particles-js": "^2.7.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.12.3"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }

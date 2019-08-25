@@ -61,3 +61,8 @@ export const timeConverter = timestamp => {
 
   return `${date}/${month}/${year} ${hour}:${min}:${sec}`;
 }
+
+
+export const getCoinIcon = symbol => {
+  return `https://s3-us-west-2.amazonaws.com/s.cdpn.io/1468070/${symbol}.svg`
+}
