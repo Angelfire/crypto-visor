@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d0dcc946-0013-4401-95ef-7ce6fb05fc60/deploy-status)](https://app.netlify.com/sites/crypto-visor/deploys)
+
 ![Cryptocurrency visor](https://i.imgur.com/MZRVqKp.png)
 # Cryptocurrency visor
 
