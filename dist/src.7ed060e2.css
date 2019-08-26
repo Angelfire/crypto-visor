@@ -66,12 +66,6 @@
   display: inline-block;
 }
 
-.coin-change {
-  font-size: 20px;
-  margin: 10px;
-  vertical-align: top;
-}
-
 .coin-change.pos {
   color: #66bb6a;
 }

@@ -30861,9 +30861,9 @@ const Card = ({
     className: "coin-price"
   }, _react.default.createElement("p", {
     className: "coin-value"
-  }, "$", coin.price), _react.default.createElement("span", {
+  }, "$", coin.price)), _react.default.createElement("div", null, _react.default.createElement("p", null, "24h Change:", " ", _react.default.createElement("span", {
     className: `coin-change ${signCoin}`
-  }, coin.change24hr, "%"))));
+  }, coin.change24hr, "%")))));
 };
 
 var _default = Card;

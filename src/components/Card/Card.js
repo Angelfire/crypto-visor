@@ -16,7 +16,14 @@ const Card = ({ coin }) => {
       <div className="card-body">
         <div className="coin-price">
           <p className="coin-value">${coin.price}</p>
-          <span className={`coin-change ${signCoin}`}>{coin.change24hr}%</span>
+        </div>
+        <div>
+          <p>
+            24h Change:{" "}
+            <span className={`coin-change ${signCoin}`}>
+              {coin.change24hr}%
+            </span>
+          </p>
         </div>
       </div>
     </div>
