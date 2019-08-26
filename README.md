@@ -4,6 +4,7 @@
 # Cryptocurrency visor
 
 - [Folder Structure](#folder-structure)
+- [API coinranking](#api)
 
 ## Folder Structure
 
@@ -36,3 +37,6 @@ crypto-visor/
     index.js
 
 ```
+
+## API
+API thanks to [Coinranking](https://docs.coinranking.com/)
