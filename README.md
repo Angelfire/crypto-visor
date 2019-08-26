@@ -26,11 +26,12 @@ crypto-visor/
         Card.js
         Card.css
         Card.test.js
+      App/
+        App.css
+        App.js
+        App.test.js
     hooks/
       useResources.js
-    App.css
-    App.js
-    App.test.js
     index.css
     index.js
 
