@@ -9,10 +9,10 @@ const useResources = num => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://api.coinmarketcap.com/v1/ticker/?limit=${num}`
+        `https://api.coinranking.com/v1/public/coins?base=USD&timePeriod=24h&limit=${num}`
       );
       const jsonData = await response.json();
-      setResources(jsonData);
+      setResources(jsonData.data.coins);
     } catch (e) {
       setIsError(e);
     } finally {

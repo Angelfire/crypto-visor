@@ -1,11 +1,10 @@
-import React from 'react';
-import { getColorClass, determineSign, timeConverter } from '../../libs/utils';
-import './Card.css';
+import React from "react";
+import { getColorClass, determineSign } from "../../libs/utils";
+import "./Card.css";
 
 const Card = ({ coin }) => {
   const cardColorClass = getColorClass(coin.color);
   const signCoin = determineSign(coin.change24hr);
-  const lastUpdate = timeConverter(coin.lastUpdate);
 
   return (
     <div className="coin">
@@ -19,12 +18,9 @@ const Card = ({ coin }) => {
           <p className="coin-value">${coin.price}</p>
           <span className={`coin-change ${signCoin}`}>{coin.change24hr}%</span>
         </div>
-        <div>
-          <p className="coin-last-update">Last update: {lastUpdate}</p>
-        </div>
       </div>
     </div>
   );
-}
+};
 
 export default Card;
